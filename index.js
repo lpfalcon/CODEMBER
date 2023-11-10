@@ -1,11 +1,6 @@
 // Import stylesheets
-import './style.css';
-import './CHALLENGE_01/index.js'
+import {countWords, countWords2} from './CHALLENGE_01/index.js'
 
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>CODEMBER </h1>`;
-
-const result = countWords('casas casa casasas');
-
-console.log(result)
+const result = countWords('casas casa casasas casa');
+const result2 = countWords2('casas casa casasas casa');
+console.log(result, result2)

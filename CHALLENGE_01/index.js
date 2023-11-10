@@ -20,13 +20,10 @@ llaveS casa CASA casa llaves -> llaves2casa3
 taza ta za taza -> taza2ta1za1
 casas casa casasas -> casas1casa1casas1
  */
- export function countWords(string) {
-  const wordsArray = string.split(' ');
+ export  function countWords(string) {
+  const wordsArray = string.toLowerCase().split(' ');
   const resultArray = [];
-  const ignoreCaseWordsArray = [
-    ...new Set(wordsArray.map((x) => x.toLowerCase())),
-  ];
-
+  const ignoreCaseWordsArray = new Set(wordsArray)
   ignoreCaseWordsArray.forEach(word=>{
     const findWords = wordsArray.filter((x)=> word === x.toLowerCase())
     resultArray.push(`${word}${findWords.length}`)
@@ -35,3 +32,17 @@ casas casa casasas -> casas1casa1casas1
   return resultArray.join('')
 }
 
+
+export  function countWords2(string){
+  const wordsArray = string.toLowerCase().split(' ');
+  const wordsObject = {}
+  
+  wordsArray.forEach(word=>{
+    wordsObject[word] = wordsObject[word] ? wordsObject[word] + 1 : 1
+  })
+   const result = []
+   Object.entries(wordsObject).forEach(([key, value]) => {
+    result.push(`${key}${value}`)
+  });
+  return result.join('')
+}
