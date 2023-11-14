@@ -32,16 +32,16 @@ export default function compiler(string){
         '#': (value)=> (value + 1),
         '@': (value)=> (value -1),
         '*': (value)=> (value * value),
-        '&': (value) => value
+        '&': (value) => (value)
     }
 
     for (let index = 0; index < string.length; index++) {
         const element = string[index];
         if(stringObjects[element]){
+            value = stringObjects[element](value)
             if(printSymbol === element){
                 stringValues.push(value)
             }
-            value = stringObjects[element](value)
         }
         
     }
