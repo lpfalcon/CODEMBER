@@ -9,6 +9,6 @@ console.log(challenge_01, challenge_01_2)
 
 // CHALLENGE_02 RESULTS
 
-const challenge_02 = compiler('&##&*&@&')
+const challenge_02 = compiler('&###@&*&###@@##@##&######@@#####@#@#@#@##@@@@@@@@@@@@@@@*&&@@@@@@@@@####@@@@@@@@@#########&#&##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@&')
 
 console.log(challenge_02)

@@ -39,7 +39,6 @@ export default function compiler(string){
         const element = string[index];
         if(stringObjects[element]){
             if(printSymbol === element){
-                console.log(value)
                 stringValues.push(value)
             }
             value = stringObjects[element](value)
